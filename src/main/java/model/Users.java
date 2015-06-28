@@ -6,7 +6,7 @@ import javax.persistence.*;
 /**
  * Created by Admin on 6/21/2015.
  */
-@Entity(name="account")
+@Entity(name="Users")
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

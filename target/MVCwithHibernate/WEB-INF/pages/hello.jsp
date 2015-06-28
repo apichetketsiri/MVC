@@ -2,6 +2,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="th" uri="http://www.springframework.org/tags/form" %>
 
 <html>
 <head>
@@ -21,28 +22,27 @@
 	<div class="row">
 		<div class="span8 offset2">
 			<h1>Users</h1>
-			<form action="#" th:action="@{/}" th:object="${user}" method="post">
+			<form:form commandName="user" >
 				<table>
 					<tr>
-						<td>Name:</td>
-						<td><input type="text" th:field="*{name}" /></td>
-
+						<td>First Name:</td>
+						<td><form:input path="firstName" /></td>
 					</tr>
 					<tr>
-						<td>last name:</td>
-						<td><input type="text" th:field="*{lastname}" /></td>
-
+						<td>Last Name:</td>
+						<td><form:input path="lastName" /></td>
 					</tr>
 					<tr>
-						<td>email:</td>
-						<td><input type="text" th:field="*{email}" /></td>
-
+						<td>Email:</td>
+						<td><form:input path="email" /></td>
 					</tr>
 					<tr>
-						<td><button type="submit">Submit</button></td>
+						<td colspan="2">
+							<input type="submit" value="Save Changes" />
+						</td>
 					</tr>
 				</table>
-			</form>
+			</form:form>
 				</div>
 			</div>
 

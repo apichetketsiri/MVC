@@ -1,6 +1,9 @@
 package model;
 
+
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Created by Admin on 6/22/2015.
@@ -8,6 +11,6 @@ import org.springframework.stereotype.Repository;
 
 public interface UserDAO {
 
-    public Users getAllUser();
-
+    public List<Users> getAllUser();
+    public void insertUser(Users user);
 }
